@@ -24,11 +24,11 @@ var server = http.createServer(function (req, res) {
   var urlInfo = parseUrl(req.url)
   var rule = find(rules, function (rule) {
     if (rule.method) {
-      if(rule.method.toLowerCase() !== req.method.toLowerCase()) {
+      if (rule.method.toLowerCase() !== req.method.toLowerCase()) {
         return false
       }
     }
-    if(rule.path instanceof RegExp) {
+    if (rule.path instanceof RegExp) {
       var matchResult = urlInfo.pathname.match(rule.path)
       if (matchResult) {
         req.params = matchResult
