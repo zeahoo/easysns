@@ -46,12 +46,6 @@
   // 获取当前登录用户
   api.getCurrentUser = function (callback) {
     fetchJson('/user')(callback)
-    /*
-    callback(null, {
-      nickname: '',
-      avatar: ''
-    })
-    */
   }
 
   // 上传头像
