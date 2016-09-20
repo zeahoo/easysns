@@ -18,7 +18,7 @@ app.use(async (ctx, next) => {
 })
 
 app.use(mount('/static', require('koa-static')(__dirname + '/public')))
-app.use(bodyparser())
+app.use(bodyparser)
 app.use(json())
 
 app.use(views(__dirname + '/views', {
